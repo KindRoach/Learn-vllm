@@ -16,6 +16,12 @@ docker pull vllm/vllm-openai
 bash run-vllm-server.sh 
 ```
 
+# Debug Offline Inference / Online Server
+
+Then debug module `vllm.entrypoints.openai.api_server` or script `offline.py` using your favorite IDE.
+
+Don't forget to set env `TORCH_COMPILE_DISABLE=1`.
+
 # Benchmark
 
 Download tools:
@@ -30,13 +36,3 @@ Run tools:
 ```bash
 bash run-bench.sh
 ```
-
-# A
-
-Download the `api_server.py` script:
-
-```bash
-wget https://github.com/vllm-project/vllm/blob/main/vllm/entrypoints/openai/api_server.py
-```
-
-Then debug this script using your favorite IDE. Don't forget to set env `TORCH_COMPILE_DISABLE=1`.
