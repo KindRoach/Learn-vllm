@@ -10,7 +10,7 @@ prompts = [
 ]
 
 sampling_params = SamplingParams(temperature=0.8, top_p=0.95)
-llm = LLM(model=model_name)
+llm = LLM(model=model_name, distributed_executor_backend="mp")
 
 outputs = llm.generate(prompts, sampling_params)
 
