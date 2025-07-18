@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug offline.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/offline.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "TORCH_COMPILE_DISABLE": "1"
+            },
+            "justMyCode": false
+        }
+    ]
+}
