@@ -1,6 +1,6 @@
 {
   "name": "VLLM OpenAI Dev Container",
-  "image": "vllm/vllm-openai:v0.9.1",
+  "image": "vllm/vllm-openai:v0.10.0",
   "mounts": [
     "source=/models,target=/models,type=bind,consistency=cached,readonly"
   ],
