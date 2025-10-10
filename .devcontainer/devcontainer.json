@@ -1,10 +1,13 @@
 {
-  "name": "VLLM OpenAI Dev Container",
+  "name": "learn-vllm",
   "image": "vllm/vllm-openai:v0.10.0",
   "mounts": [
     "source=/models,target=/models,type=bind,consistency=cached,readonly"
   ],
-  "forwardPorts": [],
-  "postCreateCommand": ""
+  "runArgs": [
+    "--runtime=nvidia",
+    "--gpus",
+    "all"
+  ]
 }
 
