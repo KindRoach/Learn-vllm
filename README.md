@@ -13,7 +13,7 @@ docker pull vllm/vllm-openai
 # Run vllm openai server in Container
 
 ```bash
-bash run-vllm-server.sh 
+bash run-vllm-server-in-docker.sh 
 ```
 
 # Debug Offline Inference / Online Server
