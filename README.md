@@ -1,37 +1,19 @@
-# Clone repo
+# Prepare Models
+Create a dir `/models` and move model files there, or change the path 
+in [devcontainer.json](.devcontainer/devcontainer.json) to your model dir.
+
+# Run vllm openai server
 
 ```bash
-git clone https://github.com/vllm-project/vllm.git
-```
-
-# Dev ENV
-
-```bash
-docker pull vllm/vllm-openai
-```
-
-# Run vllm openai server in Container
-
-```bash
-bash run-vllm-server-in-docker.sh 
+bash run-vllm-server.sh 
 ```
 
 # Debug Offline Inference / Online Server
 
-Then debug module `vllm.entrypoints.openai.api_server` or script `offline.py` using your favorite IDE.
-
-Don't forget to set env `TORCH_COMPILE_DISABLE=1`.
+Then debug module `vllm.entrypoints.openai.api_server` (don't forget to use args `--enforce_eager` to disable torch compile)
+or script `offline.py` using your favorite IDE.
 
 # Benchmark
-
-Download tools:
-
-```bash
-wget https://github.com/Yoosu-L/llmapibenchmark/releases/download/v1.0.2/llmapibenchmark_linux_amd64
-chmod +x llmapibenchmark_linux_amd64
-```
-
-Run tools:
 
 ```bash
 bash run-bench.sh

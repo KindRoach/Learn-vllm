@@ -8,9 +8,6 @@
             "program": "${workspaceFolder}/offline.py",
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}",
-            "env": {
-                "TORCH_COMPILE_DISABLE": "1"
-            },
             "justMyCode": false
         }
     ]

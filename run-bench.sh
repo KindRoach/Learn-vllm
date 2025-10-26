@@ -1,6 +1,12 @@
 #!/bin/bash
 
-./llmapibenchmark_linux_amd64 \
-    -base_url http://127.0.0.1:8000/v1 \
-    -numWords 1024 \
-    -max_tokens 512
+model_name="/models/Qwen3-4B"
+
+vllm bench serve \
+  --model "${model_name}" \
+  --dataset-name random \
+  --num-prompts 1024 \
+  --max-concurrency 16 \
+  --random-input-len 512 \
+  --random-output-len 128 \
+  --ignore-eos

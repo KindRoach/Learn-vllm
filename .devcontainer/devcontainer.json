@@ -6,8 +6,8 @@
   ],
   "runArgs": [
     "--runtime=nvidia",
-    "--gpus",
-    "all"
+    "--gpus=all",
+    "--shm-size=16G"
   ]
 }
 
